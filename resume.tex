@@ -19,7 +19,7 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \input{glyphtounicode}
-
+\usepackage{makecell}
 
 %----------FONT OPTIONS----------
 % sans-serif
@@ -49,7 +49,7 @@
 \urlstyle{same}
 
 \raggedbottom
-\raggedright
+% \raggedright
 \setlength{\tabcolsep}{0in}
 
 % Sections formatting
@@ -96,7 +96,7 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[rightmargin=\dimexpr0.06\linewidth-\leftmargin\relax]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
@@ -128,7 +128,10 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Saarland University}{Saarbr\"ucken, Germany}
-      {Master of Science in Computer Science; GPA: 1.2/1.0}
+      {\makecell[tl]{
+        Master of Science in Computer Science; GPA: 1.2/1.0 \\
+        Thesis: Real World Image Super Resolution,
+        \href{https://link.springer.com/chapter/10.1007/978-3-030-92659-5_20}{published in \underline{DAGM 2021}} }}
       {Oct. 2018 -- Sep 2020}
     \resumeSubheading
       {National Institute of Technology}{Srinagar, India}
@@ -142,16 +145,49 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Software Engineer}{Oct 2020 -- Present}
+      {Software Engineer II}{Nov 2021 -- Present}
+      {EGYM GmbH.}{M\"unchen, Germany}
+      \resumeItemListStart
+        \resumeItem{
+          As a member of an agile team of 8 engineers, developed new
+          modes of operation for the Smart Strength line of devices
+          operational on around 30k devices globally.
+        }
+
+        \resumeItem{
+          Developed a prototype peer to peer artifact distribution service in Rust
+          to reduce network costs for distributing software updates to the
+          machines.
+        }
+
+        \resumeItem{
+          Provided Level 3 support for customer service requests.
+        }
+     \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Engineer}{Aug 2019 -- Oct 2021}
       {K-Lens GmbH.}{Saarbr\"ucken, Germany}
       \resumeItemListStart
-        \resumeItem{Implementation of modules for stereo depth estimation in
-            the existing C++ codebase.}
-        \resumeItem{Development of algorithms for image restoration
-            and enhancement.}
-        \resumeItem{Development of user applications in C++/Qt and Python.}
-        \resumeItem{Participated in code reviews and mentored one new employee.}
-      \resumeItemListEnd
+        \resumeItem{
+          Main contributor for development of algorithms for image
+          restoration and enhancement for the K|Lens starting from research and
+          development of the algorithms to deployment in production code.
+        }
+
+        \resumeItem{
+          Developed algorithms for stereo depth estimation using
+          deep learning and C++.
+        }
+
+        \resumeItem{
+          Contributed to the development of user applications for the
+          Kickstarter campaign of the company. The application was based on
+          the Qt framework and involved developing the graphical user interface,
+          porting algorithms to C++ with proper tests and optimizing for
+          execution on GPUs.
+        }
+        \resumeItemListEnd
 
 % -----------Multiple Positions Heading-----------
     % \resumeSubSubheading
@@ -162,51 +198,68 @@
     % \resumeItemListEnd
     % \resumeSubHeadingListEnd
 %-------------------------------------------
-
-    \resumeSubSubheading
-      {Master Thesis
-      \underline{\href{https://github.com/zsameem/zsameem-resume/raw/master/assets/Thesis.pdf}{(url)}}
-      /Software Developer}{Sep. 2019 -- Sep 2020}
-      \resumeItemListStart
-        \resumeItem{Research and development of methods for image enhancement
-            and restoration.}
-        \resumeItem{Testing and validation of the method for images acquired in
-            varied scenes and conditions.}
-        \resumeItem{Optimization of algorithms in CUDA C++ for running time
-            improvements.}
-    \resumeItemListEnd
-
-    \resumeSubheading
-      {Master Practical Assignment}{Mar 2019 -- May 2019}
-      {Max Planck Institute for Software Systems}{Saarbr\"ucken, Germany}
-      \resumeItemListStart
-        \resumeItem{Designed a prototype client-server system in C++ using
-        \emph{Boost Asyncronous IO} library for
-            \\deep neural network execution.}
-        \resumeItem{Designed experiments to validate efficient scheduling
-            schemes for network execution requests.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Project Intern}{Jan 2017 -- Mar 2017}
-      {International Center for Theoretical Sciences}{Bangalore, India}
-      \resumeItemListStart
-        \resumeItem{Setting up of HTCondor job scheduling software for the
-            compute cluster.}
-        \resumeItem{Setting of resource monitoring and diagnostic tools for the
-            compute cluster.}
-      \resumeItemListEnd
-
   \resumeSubHeadingListEnd
 
+%
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+    {\textbf{Programming Languages:}
+      \emph{C++, Python, C, Rust, Java, JavaScript, Bash, CUDA C++}}{}
+
+      \resumeProjectHeading
+    {\textbf{Frameworks and Libraries:}
+      \emph{Qt/QML, GTest, GMock, gRPC, LevelDB, Boost ASIO, OpenCV, PyTorch, LibP2P}}{}
+
+      \resumeProjectHeading
+    {\textbf{Software Design:}
+      \emph{Clean Coding Principles and Design Patterns for Agile Software Development, TDD, DDD, CI/CD}}{}
+
+      \resumeProjectHeading
+    {\textbf{Others:}
+      \emph{Git, CMake, CTest, Make, Jira, Google Cloud Platform, Docker}}{}
+\resumeSubHeadingListEnd
+
+
+% \end{table}
 
 %-----------PROJECTS-----------
-\section{Projects}
-    \resumeSubHeadingListStart
+\section{Internships and Projects}
+  \resumeSubHeadingListStart
+      % \resumeProjectHeading
+      % {
+      %   \textbf{Project Intern}
+      %   \emph{International Center for Theoretical Sciences, Bangalore India}
+      % }
+      % {Dec 2015 -- Mar 2016}
+      % \resumeItemListStart
+      %   \resumeItem{Designed a prototype client-server system in C++ using
+      %   \emph{Boost Asyncronous IO} library for deep neural network execution.}
+      %   \resumeItem{Designed experiments to validate efficient scheduling
+      %       schemes for network execution requests.}
+      % \resumeItemListEnd
+
+
+      \resumeProjectHeading
+        {
+          \textbf{Master Practical Assignment}
+          \emph{MPI Software Systems, Saarbr\"ucken, Germany}
+        }
+        {Mar 2019 -- May 2019}
+        \resumeItemListStart
+          \resumeItem{
+            Designed a prototype client-server system in C++ using
+            \emph{Boost Asyncronous IO} library for deep neural network execution
+            and designed experiments to validate efficient scheduling schemes for
+            network execution requests.
+          }
+        \resumeItemListEnd
+
       \resumeProjectHeading
           {\textbf{PintOS Course Project} $|$
             \emph{Operating Systems, C, Automated Testing, Software Design}}
-            {Oct 2019 -- Feb 2020}
+            {}
           \resumeItemListStart
             \resumeItem{Implementation of multi-programming support and a
                 virtual memory sub-system.}
@@ -216,16 +269,16 @@
 
       \resumeProjectHeading
           {\textbf{Distributed File Server Course Project} $|$
-            \emph{Distributed Systems, C++, Git}}
-            {Oct 2018 -- Jan 2018}
+            \emph{Distributed Systems, C++}}
+            {}
           \resumeItemListStart
             \resumeItem{Multi-server file system using C++ as semester project
                 for the Distributed Systems course.}
             \resumeItem{Distributed lock server, basic file operations and
-                sharing.}
-            \resumeItem{Fault tolerance with replication and implementation of
+                sharing , fault tolerance with replication and implementation of
                 Paxos algorithm for replica consistency.}
           \resumeItemListEnd
+
       \resumeProjectHeading
       {\textbf{Other Projects}}
       {}
@@ -239,25 +292,12 @@
             {\underline{(url)}}}
         \resumeItemListEnd
 
-    \resumeSubHeadingListEnd
-
-%
-%-----------TECHNICAL SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: C++, Python, C, Java, CUDA, HTML/CSS, JavaScript} \\
-     \textbf{Frameworks}{: PyTorch, Qt, Boost ASIO} \\
-     \textbf{Developer Tools}{: Git, CMake, Make, Python Setuptools, Docker
-     , VS Code, PyCharm, IntelliJ, Eclipse} \\
-     \textbf{Libraries}{: OpenCV, Pybind11, Pandas, NumPy, Matplotlib}
-    }}
- \end{itemize}
+  \resumeSubHeadingListEnd
 
 
 %-----------TECHNICAL SKILLS-----------
 \section{Languages}
- \begin{itemize}[leftmargin=0.15in, label={}]
+ \begin{itemize}[leftmargin=0.20in, label={}]
     \small{\item{
      \textbf{English}{: C1 (TOEFL iBT:104)} \\
      \textbf{German}{: A1 } \\
