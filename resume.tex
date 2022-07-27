@@ -13,7 +13,7 @@
 \usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
-\usepackage{enumitem}
+\usepackage[inline]{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
@@ -112,8 +112,9 @@
 % \end{tabular*}
 
 \begin{center}
-    \textbf{\Huge \scshape Samim Taray} \\ \vspace{1pt}
-    \small +49-15753950072 $|$
+    \textbf{\Huge Samim Taray} \\ \vspace{0.5pt}
+    \Large{ \scshape Software Engineer} \\ \vspace{2pt}
+    \small Munich, Germany +49-15753950072 $|$
         \href{zsameem@gmail.com}
             {\underline{zsameem@gmail.com}} $|$
         \href{https://www.linkedin.com/in/samim-taray/}
@@ -122,26 +123,8 @@
             {\underline{github.com/zsameem}}
 \end{center}
 
-
-%-----------EDUCATION-----------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Saarland University}{Saarbr\"ucken, Germany}
-      {\makecell[tl]{
-        Master of Science in Computer Science; GPA: 1.2/1.0 \\
-        Thesis: Real World Image Super Resolution,
-        \href{https://link.springer.com/chapter/10.1007/978-3-030-92659-5_20}{published in \underline{DAGM 2021}} }}
-      {Oct. 2018 -- Sep 2020}
-    \resumeSubheading
-      {National Institute of Technology}{Srinagar, India}
-      {Bachelor of Technology in Information Technology; GPA 8.4/10.0}
-      {Sep. 2013 -- Jun 2018}
-  \resumeSubHeadingListEnd
-
-
 %-----------EXPERIENCE-----------
-\section{Experience}
+\section{Work Experience}
   \resumeSubHeadingListStart
 
     \resumeSubheading
@@ -170,7 +153,7 @@
       {K-Lens GmbH.}{Saarbr\"ucken, Germany}
       \resumeItemListStart
         \resumeItem{
-          Main contributor for development of algorithms for image
+          Developed algorithms for image
           restoration and enhancement for the K|Lens starting from research and
           development of the algorithms to deployment in production code.
         }
@@ -181,11 +164,8 @@
         }
 
         \resumeItem{
-          Contributed to the development of user applications for the
-          Kickstarter campaign of the company. The application was based on
-          the Qt framework and involved developing the graphical user interface,
-          porting algorithms to C++ with proper tests and optimizing for
-          execution on GPUs.
+          Developed desktop applications for the
+          Kickstarter campaign of the company using C++ and Qt framework.
         }
         \resumeItemListEnd
 
@@ -200,29 +180,66 @@
 %-------------------------------------------
   \resumeSubHeadingListEnd
 
-%
-%-----------TECHNICAL SKILLS-----------
+  %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
 \resumeSubHeadingListStart
-\resumeProjectHeading
-    {\textbf{Programming Languages:}
-      \emph{C++, Python, C, Rust, Java, JavaScript, Bash, CUDA C++}}{}
+    \resumeProjectHeading
+    {
+      \textbf{Programming Languages:}
+      \begin{itemize*}
+        \item[] C++ \item Python \item C \item Rust \item Java \item SQL \item JavaScript \item Bash \item CUDA C++
+      \end{itemize*}
+    }{}
 
-      \resumeProjectHeading
-    {\textbf{Frameworks and Libraries:}
-      \emph{Qt/QML, GTest, GMock, gRPC, LevelDB, Boost ASIO, OpenCV, PyTorch, LibP2P}}{}
+    \resumeProjectHeading
+    {
+      \textbf{Frameworks and Libraries:}
+      \begin{itemize*}
+        \item[] Qt/QML \item GTest \item gRPC \item LevelDB \item Boost ASIO \item OpenCV \item PyTorch \item LibP2P
+      \end{itemize*}
+    }{}
 
-      \resumeProjectHeading
-    {\textbf{Software Design:}
-      \emph{Clean Coding Principles and Design Patterns for Agile Software Development, TDD, DDD, CI/CD}}{}
+    \resumeProjectHeading
+    {
+      \textbf{Software Design:}
+      \begin{itemize*}
+        \item[]Clean Coding Principles and Design Patterns for Agile Software Development
+        % \item[] Test Driven Development
+        % \item Domain Driven Development
+        \item CI/CD
+      \end{itemize*}
+    }{}
 
-      \resumeProjectHeading
-    {\textbf{Others:}
-      \emph{Git, CMake, CTest, Make, Jira, Google Cloud Platform, Docker}}{}
+    \resumeProjectHeading
+    {
+      \textbf{Tools:}
+      \begin{itemize*}
+        \item[] Git
+        \item CMake
+        \item CTest
+        \item Make
+        \item Jira
+        \item Google Cloud Platform
+        \item Docker
+      \end{itemize*}
+    }{}
 \resumeSubHeadingListEnd
 
-
-% \end{table}
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Saarland University}{Saarbr\"ucken, Germany}
+      {\makecell[tl]{
+        Master of Science in Computer Science; GPA: 1.2/1.0 \\
+        Thesis: Real World Image Super Resolution,
+        \href{https://link.springer.com/chapter/10.1007/978-3-030-92659-5_20}{published in \underline{DAGM 2021}} }}
+      {Oct. 2018 -- Sep 2020}
+    \resumeSubheading
+      {National Institute of Technology}{Srinagar, India}
+      {Bachelor of Technology in Information Technology; GPA 8.4/10.0}
+      {Sep. 2013 -- Jun 2018}
+  \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
 \section{Internships and Projects}
@@ -295,16 +312,19 @@
   \resumeSubHeadingListEnd
 
 
-%-----------TECHNICAL SKILLS-----------
-\section{Languages}
- \begin{itemize}[leftmargin=0.20in, label={}]
-    \small{\item{
-     \textbf{English}{: C1 (TOEFL iBT:104)} \\
-     \textbf{German}{: A1 } \\
-     \textbf{Kashmiri}{: Native proficiency.} \\
-     \textbf{Urdu/Hindi}{: Near native proficiency.} \\
-    }}
- \end{itemize}
+%----------- Languages ----------
+\section{Language Proficiency}
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+    {
+      \begin{itemize*}
+        \item[] English: \textit{C1}
+        \item German: \textit{A1}
+        \item Kashmiri: \textit{Native}
+        \item Urdu/Hindi: \textit{Near Native}
+      \end{itemize*}
+    }{}
+\resumeSubHeadingListEnd
 %-------------------------------------------
 \end{document}
 
